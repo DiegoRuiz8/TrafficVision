@@ -1,36 +1,68 @@
 # Movilidad y Transporte - Frontend
 
-Este es el frontend del proyecto **Movilidad y Transporte**, construido con **React** y **Tailwind CSS**. La interfaz es flexible y modular, permitiendo una integración eficiente con el backend.
+Frontend del proyecto construido con React, Vite y Tailwind CSS. Basado en la plantilla TailAdmin React, incluye dashboards, gráficos y componentes reutilizables.
 
-El proyecto utiliza la plantilla **TailAdmin React**, que ofrece componentes preconstruidos como dashboards, gráficos, tablas y formularios para agilizar el desarrollo.
+Tecnologías
 
-## Tecnologías utilizadas
+- React
+- Vite
+- Tailwind CSS
 
-- **React**
-- **Tailwind CSS**
-- **Vite**
+Requisitos
 
-## Instalación y ejecución
+- Node.js >= 14 (se recomienda Node 16/18+)
 
-### Requisitos:
+Instalación y ejecución (desarrollo)
 
-- **Node.js** versión >= 14.16
+1. Ir al directorio del frontend:
 
-### Pasos:
+```
+cd frontend
+```
 
-1. Clona el repositorio:
-   git clone https://github.com/tu-usuario/Movilidad-y-Transporte.git
+2. Instalar dependencias:
 
-2. Navega al directorio:
-   cd Movilidad-y-Transporte/frontend
+```
+npm install
+```
 
-3. Instala las dependencias:
-   npm install
+3. Ejecutar servidor de desarrollo:
 
-4. Inicia el servidor de desarrollo:
-   npm run dev
-   Abre http://localhost:5173 en el navegador.
+```
+npm run dev
+```
 
-5. Compilar para producción:
-   npm run build
-   Este comando generará la carpeta dist con los archivos listos para desplegar.
+Abrir en el navegador: `http://localhost:5173` (puerto por defecto de Vite).
+
+Scripts útiles (definidos en `package.json`)
+
+- `npm run dev` — arranca Vite en modo desarrollo.
+- `npm run build` — compila el proyecto para producción (genera `/dist`).
+- `npm run preview` — sirve localmente la build de producción.
+
+Conexión con el backend
+
+Por defecto el frontend realiza peticiones al backend en `http://localhost:8080` (ver ejemplos en `src/pages/Dashboard.tsx`). Si tu API corre en otra URL/puerto, actualiza las llamadas `fetch(...)` o introduce una variable de entorno para la URL base (por ejemplo: `VITE_API_BASE`) y reemplaza los `fetch` por:
+
+```js
+fetch(`${import.meta.env.VITE_API_BASE || 'http://localhost:8080'}/ruta`)
+```
+
+Producción
+
+1. Generar build:
+
+```
+npm run build
+```
+
+2. Servir (por ejemplo con `serve` o mediante un servidor estático en el deployment):
+
+```
+npm run preview
+```
+
+Notas
+
+- Si vas a desplegar en producción, revisa las llamadas al backend y añade un mecanismo de configuración centralizada (variables de entorno o archivo `.env`).
+
