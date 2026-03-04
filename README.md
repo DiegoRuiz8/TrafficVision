@@ -20,7 +20,7 @@ Cómo empezar (resumen rápido)
 **Opción A: Iniciar Backend (API Java)**
 
 ```powershell
-$env:JAVA_HOME = 'C:\Users\Diego\.jdk\jdk-21.0.8'
+$env:JAVA_HOME = 'C:\Users\.jdk\jdk-21.0.8'
 cd backend\movilidadVision
 .\mvnw.cmd spring-boot:run
 ```
