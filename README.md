@@ -51,4 +51,8 @@ Frontend disponible en: http://localhost:5173
 - `setup-db.sql` — script SQL directo.
 - `setup-and-run.ps1` — configura Java y ejecuta la API.
 
+<img width="1913" height="957" alt="image" src="https://github.com/user-attachments/assets/956c53a0-8aba-47a0-af76-ff54616515ae" />
+
 Lee los README en `backend/` y `frontend/` para instrucciones detalladas.
+
+
